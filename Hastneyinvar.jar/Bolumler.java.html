@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Bolumler.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Bolumler.java</font>
+</center></td></tr></table>
+<pre><span class="s0">public abstract class </span><span class="s1">Bolumler </span><span class="s0">extends <a href="Giris.java.html">Giris</a> </span><span class="s1">{</span>
+     <span class="s0">private </span><span class="s1">String bolum</span><span class="s0">;</span>
+     <span class="s0">private </span><span class="s1">String drName</span><span class="s0">;</span>
+    <span class="s0">private </span><span class="s1">String unvan</span><span class="s0">;</span>
+
+
+    <span class="s0">public </span><span class="s1">Bolumler(String adSoyad2</span><span class="s0">, long </span><span class="s1">tc1</span><span class="s0">,</span><span class="s1">String bolum</span><span class="s0">, </span><span class="s1">String drName</span><span class="s0">, </span><span class="s1">String unvan) {</span>
+        <span class="s0">super</span><span class="s1">(adSoyad2</span><span class="s0">, </span><span class="s1">tc1)</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.bolum=bolum</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.drName=drName</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.unvan=unvan</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public </span><span class="s1">Bolumler(String adSoyad2</span><span class="s0">, long </span><span class="s1">tc1) {</span>
+        <span class="s0">super</span><span class="s1">(adSoyad2</span><span class="s0">, </span><span class="s1">tc1)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public abstract void </span><span class="s1">drBiligi()</span><span class="s0">;</span>
+    <span class="s0">public abstract void </span><span class="s1">muayene(String muaneSaati)</span><span class="s0">;</span>
+
+
+
+    <span class="s0">public </span><span class="s1">String getBolum() {</span><span class="s0">return </span><span class="s1">bolum</span><span class="s0">;</span><span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">setBolum(String bolum)</span>
+    <span class="s1">{</span><span class="s0">this</span><span class="s1">.bolum = bolum</span><span class="s0">;</span><span class="s1">}</span>
+
+    <span class="s0">public </span><span class="s1">String getDrName() {</span><span class="s0">return </span><span class="s1">drName</span><span class="s0">;</span><span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">setDrName(String drName) {</span>
+        <span class="s0">this</span><span class="s1">.drName = drName</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public </span><span class="s1">String getUnvan() {</span>
+        <span class="s0">return </span><span class="s1">unvan</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">setUnvan(String unvan) {</span>
+        <span class="s0">this</span><span class="s1">.unvan = unvan</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+</pre>
+</body>
+</html>

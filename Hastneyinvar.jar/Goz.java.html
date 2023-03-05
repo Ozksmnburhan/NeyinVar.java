@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Goz.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Goz.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+<span class="s0">public class </span><span class="s1">Goz </span><span class="s0">extends <a href="Bolumler.java.html">Bolumler</a></span><span class="s1">{</span>
+
+    <span class="s0">public </span><span class="s1">Goz(String adSoyad2</span><span class="s0">, long </span><span class="s1">tc1) {</span>
+        <span class="s0">super</span><span class="s1">(adSoyad2</span><span class="s0">, </span><span class="s1">tc1)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">drBiligi() {</span>
+        <span class="s1">setDrName(</span><span class="s2">&quot; Suat Uğurlu &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">setBolum(</span><span class="s2">&quot; GÖZ &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">setUnvan(</span><span class="s2">&quot; Dr. &quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">muayene(String muaneSaati){</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;</span><span class="s0">\n\n</span><span class="s2">*****************************  &quot;</span><span class="s1">+getBolum()+ </span><span class="s2">&quot; POLLİKLİNİĞİ ****************************</span><span class="s0">\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;                                                                     Muane saati : &quot;</span><span class="s1">+ muaneSaati+</span><span class="s2">&quot;</span><span class="s0">\n\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Merhaba &quot;</span><span class="s1">+adSoyad2+</span><span class="s2">&quot; Ben &quot;</span><span class="s1">+getUnvan()+getUnvan()+</span><span class="s2">&quot; şikayetin nedir ?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Scanner scanner = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">String sikayet= scanner.nextLine()</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Şimdi seni göz testine sokalım  &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i=</span><span class="s3">1</span><span class="s0">; </span><span class="s1">i&lt;=</span><span class="s3">3</span><span class="s0">; </span><span class="s1">i++)</span>
+        <span class="s1">{</span>
+            <span class="s0">try</span>
+            <span class="s1">{</span>
+                <span class="s1">Thread.sleep(</span><span class="s3">1000</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s0">catch</span><span class="s1">(InterruptedException ex)</span>
+            <span class="s1">{</span>
+                <span class="s1">Thread.currentThread().interrupt()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;1. A  B  C  D  E  F &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;2. G  H  J  J  K  L &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;3. Ş  İ  Z  X  C  V &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;4. B  N  M  Ö  Ç  W &quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">Scanner input = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">a </span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Sana gösterdiğim şablondan hangi satırı görmüyorsun !&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">a = input.nextInt()</span><span class="s0">;</span>
+        <span class="s0">switch </span><span class="s1">(a){</span>
+            <span class="s0">case </span><span class="s3">1</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Ooo göz numaran çok büyükmüş televizyonu fazla izleme !!! </span><span class="s0">\n </span><span class="s2">Göz numaran : 6.5 &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">2</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Biraz büyükmüş göz numaran  televizyon izlemeni azaltmalısın !!! </span><span class="s0">\n </span><span class="s2">Göz numaran : 4.5 &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">3</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Göz numran çokta büyük değilmiş. !!! </span><span class="s0">\n </span><span class="s2">Göz numaran : 2.5 &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">4</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Gözlerin gayet iyi görüyor !!! </span><span class="s0">\n </span><span class="s2">Göz numaran : 0.5  &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Gözlerini biraz yormuşsun sadece sana bir göz damlası yazıyorum sabah akşam kullanırsın&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">break;</span>
+
+        <span class="s1">}</span>
+
+
+
+
+
+
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

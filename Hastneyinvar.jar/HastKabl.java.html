@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>HastKabl.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+HastKabl.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.InputMismatchException</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">HastKabl {</span>
+    <span class="s0">private </span><span class="s1">String adSoyad</span><span class="s0">,</span><span class="s1">dogumTrh</span><span class="s0">;</span>
+    <span class="s0">private  long </span><span class="s1">tc</span><span class="s0">,</span><span class="s1">tel</span><span class="s0">;</span>
+    <span class="s0">public void </span><span class="s1">uyelik(){</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;</span><span class="s0">\n                                          </span><span class="s2">---------------------------------------POLİKLİNİKLER---------------------------------------------&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;</span><span class="s0">\n</span><span class="s2">************************  Üyelik Sayfası  *****************************</span><span class="s0">\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s0">try </span><span class="s1">{</span>
+
+
+        <span class="s1">Scanner input = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Adınızı Soyadınızı giriniz : &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.adSoyad = input.nextLine()</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;TC no giriniz :&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.tc=input.nextLong()</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Doğum Tarihinizi giriniz : &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.dogumTrh = input.next()</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Telefon numaranızı giriniz :&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">this</span><span class="s1">.tel=input.nextLong()</span><span class="s0">;</span>
+
+        <span class="s1">}</span><span class="s0">catch </span><span class="s1">(InputMismatchException e){</span>
+            <span class="s1">System.out.print(</span><span class="s2">&quot;Lütfen doğru bir şekilde girdiğinizden emin olunuz..&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">uyelik()</span><span class="s0">;</span>
+        <span class="s1">}</span><span class="s0">finally </span><span class="s1">{</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+
+        <span class="s1">System.out.print(</span><span class="s2">&quot;Üyeliğin Tamamlanıyor&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i=</span><span class="s3">1</span><span class="s0">; </span><span class="s1">i&lt;=</span><span class="s3">5</span><span class="s0">; </span><span class="s1">i++)</span>
+        <span class="s1">{</span>
+            <span class="s0">try</span>
+            <span class="s1">{</span>
+                <span class="s1">Thread.sleep(</span><span class="s3">1000</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s0">catch</span><span class="s1">(InterruptedException ex)</span>
+            <span class="s1">{</span>
+                <span class="s1">Thread.currentThread().interrupt()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s1">System.out.print(</span><span class="s2">&quot;.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Üyeliğin Tamamlandı&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+    <span class="s1">}</span>
+
+    <span class="s0">public </span><span class="s1">String getAdSoyad() {</span><span class="s0">return </span><span class="s1">adSoyad</span><span class="s0">;</span><span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">setAdSoyad(String adSoyad) {</span><span class="s0">this</span><span class="s1">.adSoyad = adSoyad</span><span class="s0">;</span><span class="s1">}</span>
+
+    <span class="s0">public long </span><span class="s1">getTc() {</span><span class="s0">return </span><span class="s1">tc</span><span class="s0">;</span><span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">setTc(</span><span class="s0">long </span><span class="s1">tc) {</span><span class="s0">this</span><span class="s1">.tc = tc</span><span class="s0">;</span><span class="s1">}</span>
+
+    <span class="s0">public long </span><span class="s1">getTel() {</span><span class="s0">return </span><span class="s1">tel</span><span class="s0">;</span><span class="s1">}</span>
+    <span class="s0">public void </span><span class="s1">setTel(</span><span class="s0">long </span><span class="s1">tel) {</span><span class="s0">this</span><span class="s1">.tel = tel</span><span class="s0">;</span><span class="s1">}</span>
+
+    <span class="s0">public </span><span class="s1">String getdogumTrh() {</span><span class="s0">return </span><span class="s1">dogumTrh</span><span class="s0">;</span><span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">setdogumTrh(String dogumTrh) {</span><span class="s0">this</span><span class="s1">.dogumTrh = dogumTrh</span><span class="s0">;</span><span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

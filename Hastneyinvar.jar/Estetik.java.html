@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Estetik.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Estetik.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java. util.Date</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.text.SimpleDateFormat</span><span class="s0">;</span>
+
+
+<span class="s0">public class </span><span class="s1">Estetik </span><span class="s0">extends <a href="Bolumler.java.html">Bolumler</a></span><span class="s1">{</span>
+    <span class="s0">public </span><span class="s1">Estetik(String adSoyad2</span><span class="s0">, long </span><span class="s1">tc1) {</span>
+        <span class="s0">super</span><span class="s1">(adSoyad2</span><span class="s0">, </span><span class="s1">tc1)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">drBiligi() {</span>
+        <span class="s1">setDrName(</span><span class="s2">&quot; Firuze ŞAHİN &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">setBolum(</span><span class="s2">&quot; PLASTİK VE ESTETİK CERRAHİ &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">setUnvan(</span><span class="s2">&quot; doç.dr &quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">muayene(String muaneSaati) {</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;</span><span class="s0">\n\n</span><span class="s2">***************************** &quot;</span><span class="s1">+ getBolum() + </span><span class="s2">&quot; SERVİSİ ****************************</span><span class="s0">\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;                                                                     Muane saati : &quot;</span><span class="s1">+ muaneSaati+</span><span class="s2">&quot;</span><span class="s0">\n\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Merhaba &quot; </span><span class="s1">+ adSoyad2 + </span><span class="s2">&quot; Ben &quot;</span><span class="s1">+ getUnvan()+ getDrName()+ </span><span class="s2">&quot;şikayetin nedir ?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Scanner scanner = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">String sikayet = scanner.nextLine()</span><span class="s0">;</span>
+        <span class="s0">if</span><span class="s1">(sikayet.contains(</span><span class="s2">&quot;burun&quot;</span><span class="s1">) || sikayet.contains(</span><span class="s2">&quot;Burun&quot;</span><span class="s1">) || sikayet.contains(</span><span class="s2">&quot;burn&quot;</span><span class="s1">)){</span>
+            <span class="s1">System.out.print(</span><span class="s2">&quot;Tamam aklında olan bir model var mı ? yoksa ben kataloktan göstereyim&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i=</span><span class="s3">1</span><span class="s0">; </span><span class="s1">i&lt;=</span><span class="s3">3</span><span class="s0">; </span><span class="s1">i++)</span>
+            <span class="s1">{</span>
+                <span class="s0">try</span>
+                <span class="s1">{</span>
+                    <span class="s1">Thread.sleep(</span><span class="s3">1000</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s0">catch</span><span class="s1">(InterruptedException ex)</span>
+                <span class="s1">{</span>
+                    <span class="s1">Thread.currentThread().interrupt()</span><span class="s0">;</span>
+                <span class="s1">}</span>
+                <span class="s1">System.out.print(</span><span class="s2">&quot;.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;</span><span class="s0">\n</span><span class="s2">1. Dosal Kemer&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;2. Uzun Burun&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;3. Tansiyon Burun&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;4. Aşırı Korunaklı Burun&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;5. Soğan Burun&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;6. Korunaksız Burun&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+            <span class="s1">Scanner input = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+            <span class="s0">int </span><span class="s1">a </span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Hangi seçeneği istersin : &quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">a = input.nextInt()</span><span class="s0">;</span>
+
+            <span class="s0">switch </span><span class="s1">(a){</span>
+                <span class="s0">case </span><span class="s3">1</span><span class="s1">:</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Haftaya çarşamba günü ameliyatınızı yapalım. &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s0">case </span><span class="s3">2</span><span class="s1">:</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Güzel bir seçim önümüzdeki perşembe  günü ameliyatınızı yapalım. &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s0">case </span><span class="s3">3</span><span class="s1">:</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Çok tercih edilen bir burun türü. 1 ay sonra ameliyatınızı yapalım. &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s0">case </span><span class="s3">4</span><span class="s1">:</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Mükemmel bir tercih yaptın &quot; </span><span class="s1">+ getAdSoyad()+ </span><span class="s2">&quot; ameliyatınızı hemen yapalım. &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s0">case </span><span class="s3">5</span><span class="s1">:</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Oooo çok iyi bir tercih pazar günü ameliyatınızı yapalım. &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s0">case </span><span class="s3">6</span><span class="s1">:</span>
+                    <span class="s1">System.out.println(getAdSoyad()+</span><span class="s2">&quot; Haftaya salı günü ameliyatınızı yapalım. &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+
+
+        <span class="s1">SimpleDateFormat sekil = </span><span class="s0">new </span><span class="s1">SimpleDateFormat()</span><span class="s0">;</span>
+        <span class="s1">Date tarih = </span><span class="s0">new </span><span class="s1">Date()</span><span class="s0">;</span>
+
+
+        <span class="s0">if </span><span class="s1">(sikayet.contains(</span><span class="s2">&quot;botoks&quot;</span><span class="s1">)){</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Vücüdunun neresine botoks yapmak istiyorsun &quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">Scanner a = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+            <span class="s1">String istek = a.next()</span><span class="s0">;</span>
+
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Tamamdır saat &quot;</span><span class="s1">+sekil.format(tarih)+</span><span class="s2">&quot; te ameliyata başlayalım&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">if </span><span class="s1">(sikayet.contains(</span><span class="s2">&quot;dolgu&quot;</span><span class="s1">)){</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Yarın saat 9:00 da ameliyatınızı yapalım. &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
